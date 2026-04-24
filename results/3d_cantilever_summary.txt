@@ -1,0 +1,52 @@
+3D Cantilever Static FEA Summary
+========================================
+
+Analysis target:
+  3D cantilever beam
+
+Dimensions:
+  L = 1000.000 mm
+  B = 80.000 mm
+  H = 120.000 mm
+
+Material:
+  Steel
+  E = 200000.000 MPa
+  nu = 0.300000
+
+Mesh:
+  NX = 12
+  NY = 3
+  NZ = 4
+  Nodes = 260
+  Elements = 864
+
+Boundary condition:
+  Fixed face: x = 0
+  Fixed nodes = 20
+
+Load condition:
+  Load face: x = L
+  Total force = 1000.000 N
+  Direction = -Z
+  Load nodes = 20
+
+Results:
+  Max displacement = 0.083575 mm
+  Max von Mises stress = 3.010839 MPa
+  Max stress location = (41.667, -33.333, 52.500) mm
+
+Theory comparison:
+  Theoretical tip displacement = 0.144676 mm
+  Theoretical max bending stress = 5.208333 MPa
+  Displacement difference = 42.233 %
+  Stress difference = 42.192 %
+
+Result files:
+  C:\python_workspace\fea_3d\results\3d_cantilever_von_mises.png
+  C:\python_workspace\fea_3d\results\3d_cantilever_deformed_von_mises.png
+  C:\python_workspace\fea_3d\results\3d_cantilever_summary.txt
+  C:\python_workspace\fea_3d\results\3d_cantilever_result.vtu
+
+Note:
+  TET4 저차 요소와 비교적 거친 메쉬를 사용하므로 이론값과 차이가 날 수 있습니다.
